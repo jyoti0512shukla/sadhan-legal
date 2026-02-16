@@ -234,7 +234,7 @@
     <div class="om">ॐ</div>
     <h1>साधना Sadhana</h1>
     <div class="subtitle">A Way of Life</div>
-    <div class="updated">Last updated: February 9, 2026</div>
+    <div class="updated">Last updated: February 16, 2026</div>
 </div>
 
 <div class="container">
@@ -251,6 +251,8 @@
         <li><strong>Personal reflections</strong> — Daily journal entries you create within the App</li>
         <li><strong>Preferences</strong> — Tab order, selected mantras, Panchang location, ambient sound settings, and other customization choices</li>
         <li><strong>Bookmarks and reading plans</strong> — Your saved positions and active reading plans</li>
+        <li><strong>Story progress</strong> — Katha reading progress, favorites, and downloaded story content cached locally on your device</li>
+        <li><strong>Purchase status</strong> — Whether you have unlocked Premium is cached locally for fast access; the authoritative record is maintained by Apple through StoreKit</li>
     </ul>
 
     <h3>Data We Do NOT Collect</h3>
@@ -275,7 +277,15 @@
     <p>You may deny any of these permissions, and the App will continue to function — only the specific feature requiring that permission will be unavailable.</p>
 
     <h3>Network Usage</h3>
-    <p>The App may connect to the internet solely to download optional scripture content packs and fetch the Chalisa catalog. No personal data is transmitted. The App functions fully offline for all bundled content.</p>
+    <p>The App may connect to the internet for the following purposes. <strong>No personal data is transmitted</strong> in any of these requests:</p>
+    <ul>
+        <li><strong>Scripture content</strong> — Download optional scripture content packs (e.g., Vedas, Mahabharata) from GitHub</li>
+        <li><strong>Aarti &amp; Chalisa catalog</strong> — Fetch the latest aarti and chalisa texts</li>
+        <li><strong>Stories catalog</strong> — Download the stories catalog and individual story content from GitHub</li>
+        <li><strong>Live Darshan</strong> — Load temple live-stream information and embed YouTube video players for in-app darshan viewing</li>
+        <li><strong>In-App Purchases</strong> — Communicate with Apple's App Store servers to process Premium unlock purchases and verify entitlements</li>
+    </ul>
+    <p>The App functions fully offline for all bundled content (Panchatantra stories, Ramcharitmanas, Bhagavad Gita, Panchang, and more).</p>
 
     <h3>Data Security</h3>
     <p>All data is stored locally using Apple's standard frameworks (SwiftData). It is protected by your device's built-in security features, including device passcode, Face ID, or Touch ID. We have no access to your data.</p>
@@ -287,7 +297,12 @@
     <p>The App does not collect personal information from any user, making it safe for individuals of all ages.</p>
 
     <h3>Third-Party Services</h3>
-    <p>The App does not integrate any third-party analytics, advertising, or tracking services. The App does not share data with any third party.</p>
+    <p>The App does not use any third-party analytics, advertising, or tracking services. The App does not share personal data with any third party. The following third-party services are used solely for content delivery:</p>
+    <ul>
+        <li><strong>GitHub (raw.githubusercontent.com)</strong> — Hosts downloadable scripture files, story content, and catalog data. No personal data is sent; only content files are fetched.</li>
+        <li><strong>YouTube (youtube.com)</strong> — Live Darshan temple streams are embedded using YouTube's standard embed player. YouTube's own privacy policy applies to video playback. No user data is shared by the App with YouTube.</li>
+        <li><strong>Apple StoreKit</strong> — Processes in-app purchases for Premium unlock and voluntary donations. Transactions are handled entirely by Apple; the App does not collect or store payment information.</li>
+    </ul>
 
     <h3>Crash Diagnostics (MetricKit)</h3>
     <p>The App uses Apple's built-in MetricKit framework to receive crash and hang diagnostics for stability improvements. This data is processed locally on your device. When you have "Share with App Developers" or "Share iPhone Analytics" enabled in iOS Settings, similar diagnostic data may be shared with Apple and made available to developers through Xcode Organizer. We do not send this data to our own servers.</p>
@@ -326,8 +341,13 @@
     <p>The App does not claim to be a religious authority. Content is curated from publicly available traditional texts and common devotional practices. The App is not affiliated with any specific temple, religious organization, sampradaya, or spiritual lineage.</p>
     <p>Users are encouraged to consult qualified religious scholars, pandits, or their own guru for authoritative guidance.</p>
 
-    <h3>No Financial Transactions Disclaimer</h3>
-    <p>Any voluntary contributions or in-app purchases offered through the App are considered voluntary support for the continued development of the App. <strong>No goods, services, or spiritual outcomes are guaranteed</strong> in exchange for such contributions. Donations and tips are offered in good faith as seva (service) and are non-refundable except as required by applicable law.</p>
+    <h3>In-App Purchases &amp; Financial Transactions</h3>
+    <p>The App offers core features at no cost, including the complete Panchatantra story collection, all scriptures, aarti, chalisa, puja guides, Panchang, and Japa counter. Additional premium story collections (Puranic, Epic, and Saints stories) are available through a <strong>one-time, non-consumable in-app purchase</strong> ("Premium Unlock") at the listed price.</p>
+    <ul>
+        <li><strong>Premium Unlock</strong> — A one-time purchase that unlocks all premium story categories and any future premium content added to the App. This purchase is tied to your Apple ID and can be restored on any device signed in with the same Apple ID.</li>
+        <li><strong>Voluntary donations (Dakshina)</strong> — Optional tips are offered in good faith as seva (service) and support continued development.</li>
+    </ul>
+    <p>All transactions are processed entirely by Apple through StoreKit. The App does not collect, store, or have access to any payment or billing information. <strong>No spiritual outcomes are guaranteed</strong> in exchange for any purchase. Refunds are handled by Apple per their standard refund policies.</p>
 
     <h3>Not Medical Advice</h3>
     <p>The App does not provide medical, psychological, or health advice. Spiritual practices described in the App — including chanting, fasting, meditation, and devotional routines — are voluntary and undertaken at the user's discretion. Consult your healthcare provider before making changes to your diet, exercise, or lifestyle based on any fasting or practice guidelines referenced in the App.</p>
@@ -345,7 +365,8 @@
     <ul>
         <li>Scripture texts (Ramcharitmanas, Bhagavad Gita, Vedas, Upanishads, etc.) are ancient texts in the public domain</li>
         <li>Aarti and chalisa lyrics are traditional devotional compositions in the public domain</li>
-        <li>App design, code, and curation are the intellectual property of the App's developers</li>
+        <li>Stories (Panchatantra, Puranic tales, Epic tales, and Saints stories) are retellings of traditional Indian narratives in the public domain</li>
+        <li>App design, code, artwork, and curation are the intellectual property of the App's developers</li>
         <li>The Om (ॐ) symbol and other religious symbols used are universal sacred symbols and are not claimed as trademarks</li>
     </ul>
 
