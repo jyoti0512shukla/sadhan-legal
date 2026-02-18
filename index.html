@@ -234,7 +234,7 @@
     <div class="om">ॐ</div>
     <h1>साधना Sadhana</h1>
     <div class="subtitle">A Way of Life</div>
-    <div class="updated">Last updated: February 16, 2026</div>
+    <div class="updated">Last updated: February 17, 2026</div>
 </div>
 
 <div class="container">
@@ -252,8 +252,12 @@
         <li><strong>Preferences</strong> — Tab order, selected mantras, Panchang location, ambient sound settings, and other customization choices</li>
         <li><strong>Bookmarks and reading plans</strong> — Your saved positions and active reading plans</li>
         <li><strong>Story progress</strong> — Katha reading progress, favorites, and downloaded story content cached locally on your device</li>
+        <li><strong>AI chat history</strong> — Conversations with the Sadhana AI Bot are stored on your device. If you are signed into iCloud, chat messages may also be synced to your private iCloud account via Apple's CloudKit (see "iCloud Sync" below)</li>
         <li><strong>Purchase status</strong> — Whether you have unlocked Premium is cached locally for fast access; the authoritative record is maintained by Apple through StoreKit</li>
     </ul>
+
+    <h3>iCloud Sync (CloudKit)</h3>
+    <p>The App uses Apple's CloudKit to sync your <strong>AI chat history</strong> across your devices via your iCloud account. This data is stored in your <strong>private iCloud container</strong> — only you can access it. We cannot read, access, or retrieve your synced data. iCloud sync is automatic if you are signed into iCloud on your device; no separate login is required. If you delete the App, synced data remains in your iCloud account and will be restored if you reinstall.</p>
 
     <h3>Data We Do NOT Collect</h3>
     <div class="card">
@@ -262,7 +266,7 @@
             <li>We do <strong>not</strong> require account creation or sign-in</li>
             <li>We do <strong>not</strong> track your location</li>
             <li>We do <strong>not</strong> use analytics, advertising SDKs, or third-party tracking tools</li>
-            <li>We do <strong>not</strong> store any data on remote servers</li>
+            <li>We do <strong>not</strong> store personal data on our own servers (AI chat and iCloud sync are handled by Google and Apple respectively — see details below)</li>
         </ul>
     </div>
 
@@ -273,32 +277,37 @@
         <tr><td><strong>Microphone</strong></td><td>Aarti sing-along feature — listens to your singing to highlight the current lyric line. Audio is processed on-device and is never recorded or transmitted.</td></tr>
         <tr><td><strong>Speech Recognition</strong></td><td>Recognizes aarti lyrics being sung to follow along with the text. Processing occurs on-device via Apple's Speech framework.</td></tr>
         <tr><td><strong>Photo Library (Save)</strong></td><td>Save verse cards as images to your photo library for sharing. The App does not read or access your existing photos.</td></tr>
+        <tr><td><strong>Notifications</strong></td><td>Send daily reading reminders, Smart Muhurat Alerts (before festivals, Ekadashi, Purnima, and vrat days). You control the schedule and can disable notifications at any time.</td></tr>
     </table>
     <p>You may deny any of these permissions, and the App will continue to function — only the specific feature requiring that permission will be unavailable.</p>
 
     <h3>Network Usage</h3>
-    <p>The App may connect to the internet for the following purposes. <strong>No personal data is transmitted</strong> in any of these requests:</p>
+    <p>The App may connect to the internet for the following purposes:</p>
     <ul>
+        <li><strong>Sadhana AI Bot</strong> — When you use the AI chat feature, your messages are sent to Google's Gemini AI model via Firebase AI Logic to generate responses. Google processes these messages to provide answers and may retain data in accordance with <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> and <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Data Privacy</a>. The AI Bot is scoped to dharmic/spiritual topics only. <strong>Do not share sensitive personal information in chat.</strong></li>
+        <li><strong>iCloud Sync</strong> — AI chat messages are synced to your private iCloud account via Apple's CloudKit, enabling chat history to persist across app reinstalls and sync across your devices</li>
         <li><strong>Scripture content</strong> — Download optional scripture content packs (e.g., Vedas, Mahabharata) from GitHub</li>
         <li><strong>Aarti &amp; Chalisa catalog</strong> — Fetch the latest aarti and chalisa texts</li>
         <li><strong>Stories catalog</strong> — Download the stories catalog and individual story content from GitHub</li>
         <li><strong>Live Darshan</strong> — Load temple live-stream information and embed YouTube video players for in-app darshan viewing</li>
         <li><strong>In-App Purchases</strong> — Communicate with Apple's App Store servers to process Premium unlock purchases and verify entitlements</li>
     </ul>
-    <p>The App functions fully offline for all bundled content (Panchatantra stories, Ramcharitmanas, Bhagavad Gita, Panchang, and more).</p>
+    <p>The App functions fully offline for all bundled content (Panchatantra stories, Ramcharitmanas, Bhagavad Gita, Panchang, and more). The AI Bot requires an internet connection.</p>
 
     <h3>Data Security</h3>
     <p>All data is stored locally using Apple's standard frameworks (SwiftData). It is protected by your device's built-in security features, including device passcode, Face ID, or Touch ID. We have no access to your data.</p>
 
     <h3>Data Retention &amp; Deletion</h3>
-    <p><strong>You control your data entirely.</strong> Deleting the App removes all associated data from your device. There is no cloud backup unless you have enabled iCloud device backups through your own Apple ID settings.</p>
+    <p><strong>You control your data entirely.</strong> Deleting the App removes all locally stored data from your device. AI chat messages synced to iCloud via CloudKit will remain in your iCloud account and will be restored if you reinstall the App. To permanently delete synced chat data, use the "Clear Conversation" option in the AI Bot before uninstalling, or manage your iCloud storage through iOS Settings.</p>
 
     <h3>Children's Privacy</h3>
     <p>The App does not collect personal information from any user, making it safe for individuals of all ages.</p>
 
     <h3>Third-Party Services</h3>
-    <p>The App does not use any third-party analytics, advertising, or tracking services. The App does not share personal data with any third party. The following third-party services are used solely for content delivery:</p>
+    <p>The App does not use any third-party analytics, advertising, or tracking services. The following third-party services are used for specific features:</p>
     <ul>
+        <li><strong>Google Firebase AI Logic (Gemini)</strong> — Powers the Sadhana AI Bot. When you send a message to the AI Bot, your message text and recent conversation history are transmitted to Google's servers for processing. Google may process this data per their <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>. No other personal data (name, device ID, location) is sent. The AI Bot is an optional feature — you are never required to use it.</li>
+        <li><strong>Apple CloudKit (iCloud)</strong> — Syncs AI chat messages to your private iCloud account. This data is encrypted and stored by Apple in your personal iCloud container. Only you can access it; we have no ability to read your synced data. Apple's <a href="https://www.apple.com/legal/privacy/" target="_blank">Privacy Policy</a> applies.</li>
         <li><strong>GitHub (raw.githubusercontent.com)</strong> — Hosts downloadable scripture files, story content, and catalog data. No personal data is sent; only content files are fetched.</li>
         <li><strong>YouTube (youtube.com)</strong> — Live Darshan temple streams are embedded using YouTube's standard embed player. YouTube's own privacy policy applies to video playback. No user data is shared by the App with YouTube.</li>
         <li><strong>Apple StoreKit</strong> — Processes in-app purchases for Premium unlock and voluntary donations. Transactions are handled entirely by Apple; the App does not collect or store payment information.</li>
@@ -341,10 +350,13 @@
     <p>The App does not claim to be a religious authority. Content is curated from publicly available traditional texts and common devotional practices. The App is not affiliated with any specific temple, religious organization, sampradaya, or spiritual lineage.</p>
     <p>Users are encouraged to consult qualified religious scholars, pandits, or their own guru for authoritative guidance.</p>
 
+    <h3>AI-Generated Content</h3>
+    <p>The Sadhana AI Bot provides responses generated by artificial intelligence (Google Gemini). While the AI is configured to discuss only dharmic and spiritual topics, <strong>AI-generated content may contain inaccuracies</strong>. The AI Bot is not a substitute for a qualified guru, pandit, or religious scholar. Users should verify important spiritual guidance with authoritative sources. The developers are not responsible for any actions taken based on AI-generated responses.</p>
+
     <h3>In-App Purchases &amp; Financial Transactions</h3>
-    <p>The App offers core features at no cost, including the complete Panchatantra story collection, all scriptures, aarti, chalisa, puja guides, Panchang, and Japa counter. Additional premium story collections (Puranic, Epic, and Saints stories) are available through a <strong>one-time, non-consumable in-app purchase</strong> ("Premium Unlock") at the listed price.</p>
+    <p>The App offers core features at no cost, including the complete Panchatantra story collection, all scriptures, aarti, chalisa, puja guides, Panchang, Japa counter, and a free trial of the Sadhana AI Bot (10 messages). Additional features are available through a <strong>one-time, non-consumable in-app purchase</strong> ("Premium Unlock") at the listed price.</p>
     <ul>
-        <li><strong>Premium Unlock</strong> — A one-time purchase that unlocks all premium story categories and any future premium content added to the App. This purchase is tied to your Apple ID and can be restored on any device signed in with the same Apple ID.</li>
+        <li><strong>Premium Unlock</strong> — A one-time purchase that unlocks all premium story categories (Puranic, Epic, Saints), extended Sadhana AI Bot access (1,000 messages per month), and any future premium content. This purchase is tied to your Apple ID and can be restored on any device signed in with the same Apple ID.</li>
         <li><strong>Voluntary donations (Dakshina)</strong> — Optional tips are offered in good faith as seva (service) and support continued development.</li>
     </ul>
     <p>All transactions are processed entirely by Apple through StoreKit. The App does not collect, store, or have access to any payment or billing information. <strong>No spiritual outcomes are guaranteed</strong> in exchange for any purchase. Refunds are handled by Apple per their standard refund policies.</p>
